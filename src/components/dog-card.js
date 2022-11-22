@@ -6,7 +6,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import flagsmith from 'flagsmith';
 import { useFlags, useFlagsmith } from 'flagsmith/react';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -76,7 +75,7 @@ export default function DogCard() {
 
     if(flags.show_dog_facts.value)
       fetchFact();
-	}, [dogFact.value]);
+	}, [dogFact.value, flags.show_dog_facts.value]);
 
   return (
     <Card>
